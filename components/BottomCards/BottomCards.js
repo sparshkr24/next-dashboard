@@ -82,7 +82,7 @@ const BottomCards = ({date_object}) => {
       <div className=" bg-white rounded-2xl flex-1 py-6 px-10">
         {/* subheading */}
         <div className="flex justify-between pb-3">
-          <div className="font-bold text-lg">Today's schedule</div>
+          <div className="font-bold text-lg">Today&apos;s schedule</div>
           <div className="font-normal text-sm text-gray-400 inline hover:cursor-pointer">
             See all {""}
             <Image

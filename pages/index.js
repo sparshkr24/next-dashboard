@@ -78,7 +78,7 @@ export default function Home() {
               <button className="bg-black text-white w-full py-2.5 rounded-xl mt-4">Sign In</button>
             </div>
             <div className="flex justify-center items-center p-5">
-              <span>Don't have an account? </span>
+              <span>Don&apos;t have an account? </span>
               <span onClick={()=> signIn('google')} className="text-blue-600 pl-1 hover:cursor-pointer hover:underline"> Register here</span>
             </div>
           </div>
