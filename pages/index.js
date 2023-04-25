@@ -1,55 +1,44 @@
 import Head from "next/head";
-import SVG from "react-svg";
 import Link from 'next/link';
-import { useSession, signIn, signOut, getSession } from 'next-auth/react'
-import { redirect } from "next/dist/server/api-utils";
+import { useSession, signIn, getSession } from 'next-auth/react'
+import Image from "next/image";
 
 export default function Home() {
   const {data: session, status} = useSession();
   
   return (
     <>
-      <div className="flex h-screen">
+      <div className="flex h-screen flex-col sm:flex-row">
         <Head>
           <title>Sign In</title>
         </Head>
         <div
           id="Left_side"
-          className="w-2/5 bg-black flex items-center justify-center"
+          className="w-full sm:w-2/5 bg-black h-24 sm:h-full flex items-center justify-center"
         >
-          <h1 className="text-white text-center text-5xl font-bold">BOARD.</h1>
+          <h1 className="text-white text-center text-3xl sm:text-5xl font-bold hover:cursor-pointer hover:text-[#FFFF00]">BOARD.</h1>
         </div>
         <div
           id="Right_side"
-          className="w-3/5 bg-gray-100 flex items-center justify-center"
+          className="w-full sm:w-3/5 bg-gray-100 h-full flex items-center justify-center"
         >
           <div className="">
             <h2 className="text-4xl font-bold mb-1 text-gray-800">Sign In</h2>
             <p className="text-l font-normal text-black mb-4">Sign into your account</p>
-            <div className="flex mb-8">
+            <div className="flex mb-6">
               <button
                 onClick={() => signIn('google')}
                 id="Google"
-                className="bg-white py-1 px-3 rounded-lg mr-6 flex items-center"
+                className="bg-white py-1.5 px-3 rounded-lg mr-6 flex items-center"
               >
-                {/* svg for google logo
-                <SVG
-                  src="../public/vercel.svg"
-                  width="46"
-                  height="46"
-                /> */}
+                <Image src="/google-logo.svg" className="mx-3" alt="google-svg" width={16} height={16} />
                 <p className="text-gray-600"> Sign in with Google </p>
               </button>
               <button
                 id="Apple"
                 className="bg-white py-1 px-3 rounded-lg mr-4 flex items-center"
               >
-                {/* svg for apple logo
-                <SVG
-                  src="../public/vercel.svg"
-                  width="46"
-                  height="46"
-                /> */}
+                <Image src="/apple-logo.svg" className="mx-3" alt="apple-logo" width={16} height={16}/>
                 <p className="text-gray-600"> Sign in with Apple </p>
               </button>
             </div>
@@ -88,6 +77,10 @@ export default function Home() {
               <Link href="/" className="text-blue-600"> Forgot password? </Link> <br/>
               <button className="bg-black text-white w-full py-2.5 rounded-xl my-2.5">Sign In</button>
             </div>
+            <div className="flex justify-center items-center p-5">
+              <span>Don't have an account? </span>
+              <span onClick={()=> signIn('google')} className="text-blue-600 pl-1 hover:cursor-pointer hover:underline"> Register here</span>
+            </div>
           </div>
         </div>
       </div>
@@ -95,13 +88,19 @@ export default function Home() {
   );
 }
 
-export const redirection = async (context) =>{
+export async function getServerSideProps(context) {
   const session = await getSession(context)
-  if(session){
-    return{
-      redirect : {
+
+  if (session && session.user) {
+    return {
+      redirect: {
         destination: '/dashboard',
+        permanent: false,
       },
-    };
+    }
+  }
+
+  return {
+    props: {},
   }
 }
