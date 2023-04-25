@@ -1,8 +1,12 @@
 import Head from "next/head";
 import SVG from "react-svg";
-import Link from 'next/link'
+import Link from 'next/link';
+import { useSession, signIn, signOut, getSession } from 'next-auth/react'
+import { redirect } from "next/dist/server/api-utils";
 
 export default function Home() {
+  const {data: session, status} = useSession();
+  
   return (
     <>
       <div className="flex h-screen">
@@ -24,6 +28,7 @@ export default function Home() {
             <p className="text-l font-normal text-black mb-4">Sign into your account</p>
             <div className="flex mb-8">
               <button
+                onClick={() => signIn('google')}
                 id="Google"
                 className="bg-white py-1 px-3 rounded-lg mr-6 flex items-center"
               >
@@ -88,4 +93,15 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+export const redirection = async (context) =>{
+  const session = await getSession(context)
+  if(session){
+    return{
+      redirect : {
+        destination: '/dashboard',
+      },
+    };
+  }
 }
