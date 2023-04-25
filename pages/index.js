@@ -29,21 +29,21 @@ export default function Home() {
               <button
                 onClick={() => signIn('google')}
                 id="Google"
-                className="bg-white py-1.5 px-3 rounded-lg mr-6 flex items-center"
+                className="bg-white py-1.5 px-3 rounded-lg mr-6 flex items-center hover:shadow-md hover:ring-4 hover:ring-blue-500"
               >
                 <Image src="/google-logo.svg" className="mx-3" alt="google-svg" width={16} height={16} />
-                <p className="text-gray-600"> Sign in with Google </p>
+                <p className="text-[#858585]"> Sign in with Google </p>
               </button>
               <button
                 id="Apple"
-                className="bg-white py-1 px-3 rounded-lg mr-4 flex items-center"
+                className="bg-white py-1 px-3 rounded-lg flex items-center"
               >
                 <Image src="/apple-logo.svg" className="mx-3" alt="apple-logo" width={16} height={16}/>
-                <p className="text-gray-600"> Sign in with Apple </p>
+                <p className="text-[#858585]"> Sign in with Apple </p>
               </button>
             </div>
             {/* actual form */}
-            <div className="w-2/3 w-full max-w-lg p-6 bg-white rounded-2xl shadow-lg">
+            <div className="w-2/3 w-full max-w-lg p-8 bg-white rounded-2xl shadow-lg">
               <form className="text-black">
                 <div className="mb-4">
                   <label
@@ -74,8 +74,8 @@ export default function Home() {
                   />
                 </div>
               </form>
-              <Link href="/" className="text-blue-600"> Forgot password? </Link> <br/>
-              <button className="bg-black text-white w-full py-2.5 rounded-xl my-2.5">Sign In</button>
+              <Link href="/" className="text-blue-600"> Forgot password? </Link>
+              <button className="bg-black text-white w-full py-2.5 rounded-xl mt-4">Sign In</button>
             </div>
             <div className="flex justify-center items-center p-5">
               <span>Don't have an account? </span>

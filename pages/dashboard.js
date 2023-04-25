@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="flex sm:h-screen bg-gray-100">
+      <div className="flex sm:h-screen bg-gray-100" id="webkitScroll">
         {/* Left Sidebar */}
         <Sidebar />
 
