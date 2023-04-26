@@ -1,3 +1,17 @@
+### Live Link: https://next-dashboard-eosin.vercel.app/
+
+### Features of the application:
+#### 1. Its a beautiful pixel-perfect SignIn and Dashboard application. (You cannot go to dashboard before signing In).
+#### 2. Post sign In, you can view the dummy data displayed using Line Chart and Pie Chart using "react-chartjs-2" and "charts.js".
+#### 3. You cannot go to Sign In page before Signing Out. (It will redirect you to dashboard)
+
+### Screenshots
+#### 1. Sign In page:
+<img src='./public/signinss.png' alt='Screenshot of the App'>
+
+#### 2. Dashboard page:
+<img src='./public/dashboardss.png' alt='Screenshot of the App'>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
