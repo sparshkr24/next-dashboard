@@ -8,7 +8,7 @@ export default function Home() {
   
   return (
     <>
-      <div className="flex h-screen flex-col sm:flex-row">
+      <div className="flex flex-col h-screen sm:flex-row">
         <Head>
           <title>Sign In</title>
         </Head>

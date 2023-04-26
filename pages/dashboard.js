@@ -27,16 +27,16 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="flex sm:h-screen bg-gray-100" id="webkitScroll">
+      <div className="flex bg-gray-100" id="webkitScroll">
         {/* Left Sidebar */}
         <Sidebar />
 
         {/* Right side */}
-        <div id="Right_side" className="sm:w-4/5 w-full pt-10 pb-1 m-0 px-6 sm:ml-6 sm:mr-16 sm:h-screen">
+        <div id="Right_side" className="sm:w-4/5 w-full pt-8 pb-1 m-0 px-2 sm:ml-6 sm:mr-16">
           <SearchBar/>
 
           {/* INFO CARDS */}
-          <div id="Info_cards" className="flex justify-between my-6 w-full overflow-x-scroll hide-scroll-bar overflow-hidden">
+          <div id="Info_cards" className="flex justify-between my-4 w-full overflow-x-scroll hide-scroll-bar overflow-hidden">
            
                 {info_object.map((item, index)=>{
                     return <InfoCards key={index} heading={item.heading} value={item.value} color={item.color} image={item.image} />
@@ -46,7 +46,7 @@ const Dashboard = () => {
         
 
           {/* Activity */}
-          <div id="Activity" className="w-full h-72 bg-white rounded-2xl p-6">
+          <div id="Activity" className="w-full bg-white rounded-2xl p-6 pb-2">
             <Activities date_object={date_object}/>
           </div>
 

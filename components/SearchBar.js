@@ -31,7 +31,7 @@ const SearchBar = () => {
               width={24}
               height={24}
             ></Image>
-            <img onClick={()=> signOut()} src={session?.user.image} className="rounded-full w-10 ml-10 hover:cursor-pointer hover:shadow-md hover:ring-4 hover:ring-blue-500" alt="profile-pic"></img>
+            <img onClick={()=> signOut()} src={session?.user.image} className="rounded-full w-9 ml-10 hover:cursor-pointer hover:shadow-md hover:ring-4 hover:ring-blue-500" alt="profile-pic"></img>
           </div>
         </div>
       </div>

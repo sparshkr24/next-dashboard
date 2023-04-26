@@ -62,7 +62,7 @@ const BottomCards = ({date_object}) => {
   return (
     <>
       {/* Top product's card */}
-      <div className=" bg-white flex-1 mr-8 rounded-2xl py-6 mb-8 sm:mb-0 px-10">
+      <div className=" bg-white flex-1 mr-8 rounded-2xl py-6 mb-8 sm:mb-0 px-10" style={{"padding-bottom": "0"}}>
         
         {TopProductsCard()}
 

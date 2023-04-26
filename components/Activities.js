@@ -18,13 +18,13 @@ const Activities = ({ date_object }) => {
     datasets: [
       {
         label: "Guest",
-        data: [400, 200, 500, 300],
+        data: [0, 500, 50, 350],
         borderColor: "#E9A0A0",
         tension: 0.4,
       },
       {
         label: "User",
-        data: [400, 100, 300, 200],
+        data: [150, 300, 200, 500],
         borderColor: "#9BDD7C",
         tension: 0.4,
       },
@@ -61,9 +61,9 @@ const Activities = ({ date_object }) => {
   return (
     <>
       <div id="Subheader" className="flex justify-between">
-        <div className="text-lg font-bold">Activities</div>
+        <div className="text-lg font-bold pl-1">Activities</div>
         <div>
-          <div className="rounded-2xl bg-red-300 w-2 h-2 inline-block mr-2"></div>
+          <div className="rounded-2xl bg-red-300 w-2 inline-block mr-2"></div>
           <p className="inline mr-8">Guest</p>
           <div className="rounded-2xl bg-emerald-300 w-2 h-2 inline-block mr-2"></div>
           <p className="inline mr-8">User</p>
@@ -78,7 +78,7 @@ const Activities = ({ date_object }) => {
       </div>
 
       {/* Actual chart */}
-      <div id="Chart" className="h-48 w-full">
+      <div id="Chart" className="h-44 w-full">
         <Line data={data} options={options}></Line>
       </div>
     </>
