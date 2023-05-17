@@ -4,7 +4,7 @@ import React from "react";
 const InfoCards = ({ heading, value, color, image }) => {
   return (
     <>
-      <div className={`inline-block my-4 w-56 ${color} px-4 pb-4  rounded-2xl `}>
+      <div className={`w-44 my-1 ${color} px-4 pb-4 rounded-2xl `}>
         <div className="flex justify-end pt-2 pr-4">
             <Image src={image} className="" alt="revenue-svg" width={24} height={24} />
         </div>

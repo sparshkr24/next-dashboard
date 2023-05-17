@@ -14,6 +14,12 @@
   scrollbar-width: none;
 }
 
+.monsterrat{
+  font-family: 'Montserrat', sans-serif;
+}
+.lato{
+  font-family: 'Roboto', sans-serif;
+}
 
 /* :root {
   --foreground-rgb: 0, 0, 0;

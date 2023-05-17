@@ -32,11 +32,11 @@ const Dashboard = () => {
         <Sidebar />
 
         {/* Right side */}
-        <div id="Right_side" className="sm:w-4/5 w-full pt-8 pb-1 m-0 px-2 sm:ml-6 sm:mr-16">
+        <div id="Right_side" className="lg:w-4/5 w-full pt-8 pb-1 m-0 px-2 lg:ml-6 lg:mr-16">
           <SearchBar/>
 
           {/* INFO CARDS */}
-          <div id="Info_cards" className="flex justify-between my-4 w-full overflow-x-scroll hide-scroll-bar overflow-hidden">
+          <div id="Info_cards" className="flex justify-evenly md:justify-between my-4 w-full flex-wrap pt-3">
            
                 {info_object.map((item, index)=>{
                     return <InfoCards key={index} heading={item.heading} value={item.value} color={item.color} image={item.image} />
