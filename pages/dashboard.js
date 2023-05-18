@@ -1,5 +1,5 @@
 import { useSession, signOut, getSession } from "next-auth/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Sidebar from "@/components/Sidebar";
@@ -10,20 +10,29 @@ import BottomCards from "@/components/BottomCards/BottomCards";
 
 const Dashboard = () => {
   const { data: session } = useSession();
+  const [info_object, setInfoObject] = useState([])
+  const [date_object, setDateObject] = useState([])
 
   //   options for date range drop down Menu
-  const date_object = [
-    { value: "May - June 2023", label: "May-June 2023" },
-    { value: "June - July 2023", label: "June-July 2023" },
-    { value: "July - Aug 2023", label: "July-Aug 2023" },
-  ];
+  useEffect(()=>{
+    fetch(`http://localhost:3000/api/date`).then((result)=> result.json(result)).then((data)=>{
+      setDateObject(data)
+      console.log(data);
+    }).catch(()=>{
+      console.log('error while fetching date object');
+    })
+  }, [])
 
-  const info_object = [
-    {heading: "Total Revenue", value: "$2,156,870", color: "bg-emerald-100", image: "/revenue.svg"},
-    {heading: "Total Transactions", value: "156,870", color: "bg-orange-100", image: "/transaction_card.svg"},
-    {heading: "Total Likes", value: "856,870", color: "bg-red-100", image: "/likes.svg"},
-    {heading: "Total Users", value: "56,870", color: "bg-violet-100", image: "/user_card.svg"},
-  ]
+  useEffect(()=>{
+    fetch(`http://localhost:3000/api/info`).then((result)=> result.json(result)).then((data)=>{
+      setInfoObject(data)
+      console.log(data);
+    }).catch(()=>{
+      console.log('error while fetching info object');
+    })
+  }, [])
+
+  
 
   return (
     <>
@@ -51,7 +60,7 @@ const Dashboard = () => {
           </div>
 
           {/* Bottom Cards */}
-          <div id="Remaining_cards" className="flex flex-col sm:flex-row justify-between pt-10 mb:py-10">
+          <div id="Remaining_cards" className="flex flex-col sm:flex-row justify-between pt-10 pb-4">
             <BottomCards date_object={date_object}/>
           </div>
         </div>

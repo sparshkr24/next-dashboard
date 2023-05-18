@@ -42,14 +42,14 @@ export default function Home() {
                 className="bg-white py-1.5 px-3 rounded-lg mr-6 flex items-center hover:shadow-md hover:ring-4 hover:ring-blue-500"
               >
                 <Image src="/google-logo.svg" className="mx-3" alt="google-svg" width={16} height={16} />
-                <div className="text-[#858585] text-[12px]"> <span className="hidden sm:inline"> Sign in with </span> <span> Google </span></div>
+                <div className="px-3 sm:px-0 text-[#858585] text-[16px] sm:text-[12px]"> <span className="hidden sm:inline"> Sign in with </span> <span> Google </span></div>
               </button>
               <button
                 id="Apple"
                 className="bg-white py-1 px-3 rounded-lg flex items-center"
               >
                 <Image src="/apple-logo.svg" className="mx-3" alt="apple-logo" width={16} height={16}/>
-                <div className="text-[#858585] text-[12px]"> <span className="hidden sm:inline"> Sign in with </span> <span> Apple </span></div>
+                <div className="px-3 sm:px-0 text-[#858585] text-[16px] sm:text-[12px]"> <span className="hidden sm:inline"> Sign in with </span> <span> Apple </span></div>
               </button>
             </div>
             {/* actual form */}
