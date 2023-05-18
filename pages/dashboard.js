@@ -15,7 +15,7 @@ const Dashboard = () => {
 
   //   options for date range drop down Menu
   useEffect(()=>{
-    fetch(`http://localhost:3000/api/date`).then((result)=> result.json(result)).then((data)=>{
+    fetch(`https://next-dashboard-eosin.vercel.app/api/date`).then((result)=> result.json(result)).then((data)=>{
       setDateObject(data)
       console.log(data);
     }).catch(()=>{
@@ -24,7 +24,7 @@ const Dashboard = () => {
   }, [])
 
   useEffect(()=>{
-    fetch(`http://localhost:3000/api/info`).then((result)=> result.json(result)).then((data)=>{
+    fetch(`https://next-dashboard-eosin.vercel.app/api/info`).then((result)=> result.json(result)).then((data)=>{
       setInfoObject(data)
       console.log(data);
     }).catch(()=>{
