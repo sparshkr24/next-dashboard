@@ -33,7 +33,7 @@ export default function Home() {
           className="w-full px-3 sm:w-3/5 bg-[#F5F5F5;] h-full flex items-center justify-center"
         >
           <div className="">
-            <h2 className="text-[36px] font-bold mb-1 monsterrat">Sign In</h2>
+            <h2 className="text-[28px] sm:text-[36px] font-bold mb-1 monsterrat">Sign In</h2>
             <p className="text-[16px] font-normal text-black mb-4 lato">Sign into your account</p>
             <div className="flex justify-between mb-6">
               <button

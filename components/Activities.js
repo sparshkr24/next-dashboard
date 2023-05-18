@@ -63,7 +63,7 @@ const Activities = ({ date_object }) => {
       <div id="Subheader" className="flex justify-between">
         <div className="text-lg font-bold pl-1">Activities</div>
         <div>
-          <div className="rounded-2xl bg-red-300 w-2 inline-block mr-2"></div>
+          <div className="rounded-2xl bg-red-300 w-2 h-2 inline-block mr-2"></div>
           <p className="inline mr-8">Guest</p>
           <div className="rounded-2xl bg-emerald-300 w-2 h-2 inline-block mr-2"></div>
           <p className="inline mr-8">User</p>
