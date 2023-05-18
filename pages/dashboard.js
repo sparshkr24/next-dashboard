@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="flex bg-gray-100" id="webkitScroll">
+      <div className="flex bg-gray-100 h-[100vh] overflow-y-auto">
         {/* Left Sidebar */}
         <Sidebar />
 

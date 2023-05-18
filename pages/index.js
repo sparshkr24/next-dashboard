@@ -24,7 +24,7 @@ export default function Home() {
         </Head>
         <div
           id="Left_side"
-          className="w-full sm:w-2/5 bg-black h-24 sm:h-full flex items-center justify-center"
+          className="w-full sm:w-2/5 bg-black h-24 sm:h-screen flex items-center justify-center"
         >
           <h1 className="text-white text-3xl sm:text-5xl font-black hover:text-[#FFFF00] monsterrat">BOARD.</h1>
         </div>

@@ -20,7 +20,7 @@ const SearchBar = () => {
           Dashboard
         </div>
 
-        <div className="sm:hidden">
+        <div className="lg:hidden">
           {/* hamburger menu start */}
           <button onClick={toggleMenu}>
             <Image src={ham} alt="hamburger" width={20} height={20} />
@@ -30,7 +30,7 @@ const SearchBar = () => {
           {/* sidebar content */}
         </div>
 
-        <div className="hidden sm:flex items-center justify-between">
+        <div className="hidden lg:flex items-center justify-between">
           <div className="flex items-center justify-center bg-white px-2 sm:px-4 py-1 rounded-xl ">
             <input
               placeholder="Search..."

@@ -16,56 +16,56 @@ const Sidebar = ({check}) => {
               Board.
             </Link>
           </div>
-          <div className="flex justify-start font-semibold hover:underline active:font-bold hover:cursor-pointer text-md my-6">
+          <div className="flex justify-start font-semibold active:font-bold hover:cursor-pointer text-md my-6">
             {" "}
             <Image
               src="/dashboard.svg"
               alt="Dashboard"
               width={20}
               height={20}
-              className="inline mr-[20px]"
+              className="inline mr-1"
             />{" "}
-            <span className="font-[18px]">Dashboard</span>
+            <span className="font-[18px] hover:bg-white hover:text-black py-1 px-4 ease-in-out duration-300  rounded-2xl">Dashboard</span>
           </div>
-          <div className="flex justify-start font-medium hover:underline active:font-bold hover:cursor-pointer text-md my-6">
+          <div className="flex justify-start font-medium active:font-bold hover:cursor-pointer text-md my-6">
             <Image
               src="/transaction.svg"
               alt="Dashboard"
               width={20}
               height={20}
-              className="inline mr-[20px]"
+              className="inline mr-1"
             />
-            <span className="font-[18px]">Transactions</span>
+            <span className="font-[18px] hover:bg-white hover:text-black py-1 px-4 ease-in-out duration-300  rounded-2xl">Transactions</span>
           </div>
-          <div className="flex justify-start font-medium hover:underline active:font-bold hover:cursor-pointer text-md my-6">
+          <div className="flex justify-start font-medium active:font-bold hover:cursor-pointer text-md my-6">
             <Image
               src="/schedule.svg"
               alt="Dashboard"
               width={20}
               height={20}
-              className="inline mr-[20px]"
+              className="inline mr-1"
             />
-            <span className="font-[18px]">Schedules</span>
+            <span className="font-[18px] hover:bg-white hover:text-black py-1 px-4 ease-in-out duration-300  rounded-2xl">Schedules</span>
           </div>
-          <div className="flex justify-start font-medium hover:underline active:font-bold hover:cursor-pointer text-md my-6">
+          <div className="flex justify-start font-medium active:font-bold hover:cursor-pointer text-md my-6">
             <Image
               src="/user.svg"
               alt="Dashboard"
               width={20}
               height={20}
-              className="inline mr-[20px]"
+              className="inline mr-1"
             />
-            <span className="font-[18px]">Users</span>
+            <span className="font-[18px] hover:bg-white hover:text-black py-1 px-4 ease-in-out duration-300  rounded-2xl">Users</span>
           </div>
-          <div className="flex justify-start font-medium hover:underline active:font-bold hover:cursor-pointer text-md my-6">
+          <div className="flex justify-start font-medium active:font-bold hover:cursor-pointer text-md my-6">
             <Image
               src="/setting.svg"
               alt="Dashboard"
               width={20}
               height={20}
-              className="inline mr-[20px]"
+              className="inline mr-1"
             />
-            <span className="font-[18px]">Settings</span>
+            <span className="font-[18px] hover:bg-white hover:text-black py-1 px-4 ease-in-out duration-300  rounded-2xl">Settings</span>
           </div>
         </div>
         <div>

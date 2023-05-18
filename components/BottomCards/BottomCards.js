@@ -62,12 +62,12 @@ const BottomCards = ({date_object}) => {
   return (
     <>
       {/* Top product's card */}
-      <div className=" bg-white flex-1 mr-8 rounded-2xl py-6 mb-8 sm:mb-0 px-10" style={{"padding-bottom": "0"}}>
+      <div className=" bg-white flex-1 sm:mr-8 rounded-2xl pt-6 mb-8 sm:mb-0 px-10">
         
         {TopProductsCard()}
 
-        <div className="flex justify-evenly items-center">
-          <div id="Pie_chart" className="h-32">
+        <div className="lg:flex justify-evenly items-center">
+          <div id="Pie_chart" className="h-32 mb-6 lg:mb-0 ">
               <Pie data={data} options={options}/>
           </div>
           <div id="Info_data" className="">
@@ -79,7 +79,7 @@ const BottomCards = ({date_object}) => {
       </div>
 
       {/* Today's schedule card */}
-      <div className=" bg-white rounded-2xl flex-1 py-6 px-10">
+      <div className=" bg-white rounded-2xl flex-1 pt-6 px-10">
         {/* subheading */}
         <div className="flex justify-between pb-3">
           <div className="font-bold text-lg">Today&apos;s schedule</div>
